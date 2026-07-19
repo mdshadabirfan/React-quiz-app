@@ -1,0 +1,31 @@
+ [
+  {
+    "id": 1,
+    "category": "HTML",
+    "question": "What is the correct HTML element for inserting a line break?",
+    "options": ["<br>", "<break>", "<lb>", "<newline>"],
+    "answer": "<br>"
+  },
+  {
+    "id": 2,
+    "category": "HTML",
+    "question": "Which HTML attribute specifies an alternate text for an image, if the image cannot be displayed?",
+    "options": ["title", "src", "alt", "longdesc"],
+    "answer": "alt"
+  },
+  {
+    "id": 3,
+    "category": "CSS",
+    "question": "Which CSS property is used to change the background color of an element?",
+    "options": ["color", "background-color", "bgcolor", "background"],
+    "answer": "background-color"
+  },
+  {
+    "id": 4,
+    "category": "CSS",
+    "question": "Which CSS property controls the text size?",
+    "options": ["font-style", "text-size", "font-size", "text-style"],
+    "answer": "font-size"
+  }
+  
+]
