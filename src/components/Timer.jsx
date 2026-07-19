@@ -16,14 +16,14 @@ const Timer = ({totalDuration, setTotalDuration, theme}) => {
     return () => {
       clearInterval(timerId);
     };
-  }, []);
+  }, [setTotalDuration]);
   const minutes = Math.floor(totalDuration / 60)
     .toString()
     .padStart(2, "0");
   const seconds = (totalDuration % 60).toString().padStart(2, "0");
   return (
-    <div className="text-center text-3xl">
-      🕜 Time Left: {minutes} : {seconds}
+    <div className="text-center text-3xl font-bold mt-5" style={{color: totalDuration <= 10? "red" : ""}}>
+       Time Left: {minutes} : {seconds}
     </div>
   );
 };

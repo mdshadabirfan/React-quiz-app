@@ -1,31 +1,72 @@
- [
+[
   {
     "id": 1,
-    "category": "HTML",
-    "question": "What is the correct HTML element for inserting a line break?",
-    "options": ["<br>", "<break>", "<lb>", "<newline>"],
-    "answer": "<br>"
+    "category": "JavaScript",
+    "question": "Which method is used to remove the last element from an array?",
+    "options": ["pop()", "push()", "shift()", "splice()"],
+    "answer": "pop()"
   },
   {
     "id": 2,
-    "category": "HTML",
-    "question": "Which HTML attribute specifies an alternate text for an image, if the image cannot be displayed?",
-    "options": ["title", "src", "alt", "longdesc"],
-    "answer": "alt"
+    "category": "JavaScript",
+    "question": "How do you write a conditional statement for executing code if 'i' is NOT equal to 5?",
+    "options": ["if (i != 5)", "if (i <> 5)", "if i =! 5 then", "if i_not_5"],
+    "answer": "if (i != 5)"
   },
   {
     "id": 3,
-    "category": "CSS",
-    "question": "Which CSS property is used to change the background color of an element?",
-    "options": ["color", "background-color", "bgcolor", "background"],
-    "answer": "background-color"
+    "category": "JavaScript",
+    "question": "What is the correct way to write a JavaScript array?",
+    "options": ["const colors = ['red', 'green', 'blue']", "const colors = (1:'red', 2:'green', 3:'blue')", "const colors = 'red', 'green', 'blue'", "const colors = 1 = ('red'), 2 = ('green')"],
+    "answer": "const colors = ['red', 'green', 'blue']"
   },
   {
     "id": 4,
-    "category": "CSS",
-    "question": "Which CSS property controls the text size?",
-    "options": ["font-style", "text-size", "font-size", "text-style"],
-    "answer": "font-size"
+    "category": "JavaScript",
+    "question": "Which operator is used to assign a value to a variable?",
+    "options": ["=", "*", "-", "x"],
+    "answer": "="
+  },
+  {
+    "id": 5,
+    "category": "JavaScript",
+    "question": "What will `typeof null` return in JavaScript?",
+    "options": ["object", "null", "undefined", "number"],
+    "answer": "object"
+  },
+  {
+    "id": 6,
+    "category": "React",
+    "question": "Which Hook is used to manage state in a functional component?",
+    "options": ["useState", "useEffect", "useContext", "useReducer"],
+    "answer": "useState"
+  },
+  {
+    "id": 7,
+    "category": "React",
+    "question": "What is the purpose of 'key' prop in React lists?",
+    "options": ["To uniquely identify elements among siblings", "To bind data to the DOM", "To style specific items", "To trigger re-renders"],
+    "answer": "To uniquely identify elements among siblings"
+  },
+  {
+    "id": 8,
+    "category": "React",
+    "question": "How do you pass data from a parent component to a child component?",
+    "options": ["Props", "State", "Context", "Redux"],
+    "answer": "Props"
+  },
+  {
+    "id": 9,
+    "category": "React",
+    "question": "Which lifecycle method or Hook runs after every single render by default?",
+    "options": ["useEffect with no dependency array", "componentDidMount", "useEffect with an empty array", "componentWillUnmount"],
+    "answer": "useEffect with no dependency array"
+  },
+  {
+    "id": 10,
+    "category": "React",
+    "question": "What syntax extension does React use to describe what the UI should look like?",
+    "options": ["JSX", "HTML", "ECMAScript", "XML"],
+    "answer": "JSX"
   }
-  
 ]
