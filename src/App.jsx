@@ -11,7 +11,7 @@ const getInitialTheme = () => {
   );
 };
 const App = () => {
-  const QUIZ_DURATION = 5;
+  const QUIZ_DURATION = 70;
 
   const restartQuiz = () => {
     setCurrentIndex(0);

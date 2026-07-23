@@ -25,9 +25,13 @@ const OptionButton = ({
       disabled={disabled}
       onClick={() => onClick(option)}
       className={`
-flex items-center p-4 rounded-xl transition-all duration-200
+flex items-center p-4
 w-full text-left shadow-lg border border-slate-300 dark:border-slate-600 focus:ring-2
-focus:ring-blue-500
+focus:ring-blue-500 hover:-translate-y-1
+hover:shadow-xl
+transition-all
+duration-300
+rounded-2xl
 ${buttonClass}
 ${
   disabled

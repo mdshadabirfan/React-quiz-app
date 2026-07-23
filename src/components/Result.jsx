@@ -1,34 +1,61 @@
 import React from "react";
 import questions from "./questions.json";
+import { FiRefreshCw, FiAward } from "react-icons/fi";
 
 const Result = ({ score, onRestart }) => {
+  const percentage = Math.round((score / questions.length) * 100);
+
+  const getMessage = () => {
+    if (percentage === 100) return "🏆 Perfect! Outstanding!";
+    if (percentage >= 80) return "🎉 Excellent Work!";
+    if (percentage >= 60) return "👏 Good Job!";
+    if (percentage >= 40) return "🙂 Keep Practicing!";
+    return "💪 Don't Give Up!";
+  };
+
   return (
-    <div className="flex items-center justify-center min-h-screen px-4">
-      <div className="max-w-4xl w-full flex flex-col lg:flex-row items-center lg:items-start gap-12">
-        <div className=" lg:w-1/2 text-center lg:text-left">
-          <p className="text-2xl lg:text-4xl font-light mb-4 leading-tight">
-            Quiz Completed
-          </p>
-          <h3 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
-            Your Score:
-          </h3>
-          <div className="my-5">
-            <div className="w-full bg-slate-300 dark:bg-slate-700 p-10 rounded text-left grid gap-5">
-              <h2 className="text-4xl font-medium ">
-                Marks: {`${score} / ${questions.length}`}
-              </h2>
-              <h2 className="text-4xl font-medium ">
-                Percentage: {Math.floor((score / questions.length) * 100)}%
-              </h2>
-            </div>
-            <button
-              onClick={onRestart}
-              className="mt-4 w-fit text-lg px-10 py-3 rounded-lg font-semibold transition-all duration-200 shadow-lg text-white bg-linear-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 cursor-pointer"
-            >
-              Restart Quiz
-            </button>
+    <div className="min-h-screen flex items-center justify-center px-4 py-8">
+      <div className="w-full max-w-xl rounded-3xl bg-white dark:bg-slate-800 shadow-2xl p-8 md:p-10">
+
+        <div className="flex justify-center mb-6">
+          <div className="w-20 h-20 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 flex items-center justify-center text-white text-4xl shadow-lg">
+            <FiAward />
           </div>
         </div>
+
+        <h1 className="text-4xl font-bold text-center">
+          Quiz Completed!
+        </h1>
+
+        <p className="text-center text-slate-500 dark:text-slate-400 mt-2 text-lg">
+          {getMessage()}
+        </p>
+
+        <div className="mt-8 rounded-2xl bg-slate-100 dark:bg-slate-700 p-6">
+
+          <div className="flex justify-between items-center py-3 border-b border-slate-300 dark:border-slate-600">
+            <span className="text-lg">Score</span>
+            <span className="text-2xl font-bold">
+              {score} / {questions.length}
+            </span>
+          </div>
+
+          <div className="flex justify-between items-center py-3">
+            <span className="text-lg">Percentage</span>
+            <span className="text-2xl font-bold text-green-500">
+              {percentage}%
+            </span>
+          </div>
+
+        </div>
+
+        <button
+          onClick={onRestart}
+          className="mt-8 w-full flex items-center justify-center gap-3 py-4 rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 text-white text-lg font-semibold hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 shadow-lg"
+        >
+          <FiRefreshCw />
+          Restart Quiz
+        </button>
       </div>
     </div>
   );
